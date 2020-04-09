@@ -56,23 +56,27 @@
 }
 
   @font-face {
-   font-family:"aileron-thin";
-   src: url("aileron/Aileron-Thin.otf");
+   font-family:"garamond-thin";
+   src: url("garamond/CormorantGaramond-Medium.ttf");
 
   }
   @font-face {
-    font-family:"aileron";
-    src: url("aileron/Aileron-Regular.otf");
+    font-family:"roboto";
+    src: url("roboto/Roboto-Light.ttf");
+  }
+  @font-face {
+    font-family:"roboto-bold";
+    src: url("roboto/Roboto-Bold.ttf");
   }
   .bg-1 {
     background-color: #0F384A;
-    color: #FFFFFF;
-    font-family: aileron-thin;
+    color: white;
+    font-family: garamond-thin;
   }
   .bg-2 {
     background-color: #181A1B; /* Background color*/
-    color: #FFFFFF; /*Text color*/
-    font-family: aileron-thin;
+    color: white; /*Text color*/
+    font-family: roboto;
     margin-left: 10px;
     margin-right: 10px;
     margin-top:10px
@@ -81,30 +85,32 @@
   }
   .bg-3 {
     background-color: #181A1B;
-    color: #FFFFFF;
-    font-family: aileron;
+    font-family: roboto;
   }
   .btn {
     border: none;
     background-color: inherit;
-    font-family: aileron;
+    font-family: roboto;
     padding: 14px 28px;
     font-size: 16px;
     cursor: pointer;
     display: inline-block;
-    color: #070F11;
+    color: white;
   }
 
   .navbar {
-    background-color: #FFFFFF !important;
+    background-color: #464646 !important;
     border-right: 0px !important;
     border-left: 0px !important;
   }
 
   /* On mouse-over */
-  .btn:hover {background: #eee;}
+  .btn:hover {
+    background: #262626;
+    color: white;
+  }
 
-  .border { border-width: 5px; border-color: #C8D9E1; border-style: solid; }
+  .border { border-width: 5px; border-color: white; border-style: solid; }
 
 
 
@@ -185,21 +191,21 @@
     <a href="https://www.linkedin.com/in/eliot-robson/"><i class="fab fa-linkedin-in fa-3x" style='margin: 10px; color:white'></i></a>
     <a href="https://www.github.com/eliotdexter/"><i class="fab fa-github fa-3x" style='margin: 10px; color:white'></i></a>
     <a href="https://www.quora.com/profile/Eliot-Robson"><i class="fab fa-quora fa-3x" style='margin: 10px; color:white'></i></a>
+    <a href="https://stackexchange.com/users/3494323/eliotdexter"><i class="fab fa-stack-exchange fa-3x" style='margin: 10px; color:white'></i></a>
 </div>
 
 <nav id="navbar" class="navbar navbar-default" style="z-index: 100">
-  <div class="container navbar-style">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
+        <button class="btn" onclick="changeAbout()">ABOUT</button>
       </button>
-      <button class="btn" onclick="changeAbout()">ABOUT</button>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-
         <button class="btn" onclick="changeResearch()">RESEARCH</button>
         <button class="btn" onclick="changeTeaching()">TEACHING</button>
         <button class="btn" onclick="changeCV()">CV</button>
