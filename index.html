@@ -83,6 +83,12 @@
     margin-bottom:500px;
     padding-bottom: 100px;
   }
+  a:link {
+    color: fuchsia;
+  }
+  a:visited {
+    color: fuchsia;
+  }
   .bg-3 {
     background-color: #181A1B;
     font-family: roboto;
@@ -108,6 +114,11 @@
   .btn:hover {
     background: #262626;
     color: white;
+  }
+
+  .btn:visited {
+    background: #262626;
+    color: red;
   }
 
   .border { border-width: 5px; border-color: white; border-style: solid; }
@@ -201,8 +212,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <button class="btn" onclick="changeAbout()">ABOUT</button>
       </button>
+      <button class="btn" onclick="changeAbout()">ABOUT</button>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -210,7 +221,6 @@
         <button class="btn" onclick="changeTeaching()">TEACHING</button>
         <button class="btn" onclick="changeCV()">CV</button>
         <button class="btn" onclick="changeMisc()">MISC</button>
-
       </ul>
     </div>
   </div>
