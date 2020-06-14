@@ -11,6 +11,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/7ed705c588.js" crossorigin="anonymous"></script>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169313994-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-169313994-1');
+  </script>
 
   <style>
   #navbar {
@@ -25,7 +34,6 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
   }
 
   #navbar a:hover {
@@ -75,10 +83,9 @@
 
 
   .bg-1 code {
-    font-size: 20px;
+    font-size: calc(10px + 1vw);
     color: white;
     background: #0F384A;
-    overflow-wrap: normal;
   }
 
   .bg-1 code::after{
@@ -87,7 +94,7 @@
   }
 
   .bg-1 i {
-    margin: 20px;
+    margin: calc(10px + 1vw);
     color: white;
   }
 
@@ -103,17 +110,17 @@
   }
 
   .bg-2 h2 {
-    font-size: 40px;
+    font-size: calc(20px + 2.5vw);
     margin-top: 5px;
   }
 
   .bg-2 h3 {
-    font-size: 30px;
+    font-size: calc(15px + 1vw);
     margin-top: 5px;
   }
 
   .bg-2 p {
-    font-size: 20px;
+    font-size: calc(10px + 1vw);
   }
 
   a:link {
@@ -129,7 +136,7 @@
   }
 
   .bg-3 h1 {
-    font-size: 65px;
+    font-size: calc(20px + 4vw);
   }
 
   .btn {
@@ -137,7 +144,7 @@
     background-color: inherit;
     font-family: roboto;
     padding: 10px 15px;
-    font-size: 25px;
+    font-size: calc(15px + 1vw);
     cursor: pointer;
     display: inline-block;
     color: white;
