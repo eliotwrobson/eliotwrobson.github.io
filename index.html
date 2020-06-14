@@ -14,46 +14,45 @@
 
   <style>
   #navbar {
-  overflow: hidden;
-  background-color: #ffffff;
-}
+    overflow: hidden;
+    background-color: #ffffff;
+  }
 
-#navbar a {
-  float: left;
-  display: block;
-  color: #770a44;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+  #navbar a {
+    float: left;
+    display: block;
+    color: #770a44;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
 
-#navbar a:hover {
-  background-color: #ffffff;
-  color: black;
-  z-index: 2;
-}
+  #navbar a:hover {
+    background-color: #ffffff;
+    color: black;
+    z-index: 2;
+  }
 
-#navbar a.active {
-  background-color: #ffffff;
-  color: white;
-  z-index: 2;
+  #navbar a.active {
+    background-color: #ffffff;
+    color: white;
+    z-index: 2;
 
-}
+  }
+  .content {
+    padding: 16px;
+  }
 
-.content {
-  padding: 16px;
-}
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
+  .sticky + .content {
+    padding-top: 60px;
+  }
 
   @font-face {
    font-family:"garamond-thin";
@@ -73,6 +72,24 @@
     color: white;
     font-family: garamond-thin;
   }
+
+
+  .bg-1 code {
+    font-size: 20px;
+    color: white;
+    background: #0F384A;
+  }
+
+  .bg-1 code::after{
+    content: "\a";
+    white-space: pre;
+  }
+
+  .bg-1 i {
+    margin: 20px;
+    color: white;
+  }
+
   .bg-2 {
     background-color: #181A1B; /* Background color*/
     color: white; /*Text color*/
@@ -84,10 +101,10 @@
     padding-bottom: 100px;
   }
   a:link {
-    color: aqua;
+    color: DodgerBlue;
   }
   a:visited {
-    color: aqua;
+    color: DodgerBlue;
   }
   .bg-3 {
     background-color: #181A1B;
@@ -97,8 +114,8 @@
     border: none;
     background-color: inherit;
     font-family: roboto;
-    padding: 14px 28px;
-    font-size: 16px;
+    padding: 10px 15px;
+    font-size: 25px;
     cursor: pointer;
     display: inline-block;
     color: white;
@@ -116,9 +133,6 @@
   }
 
   .border { border-width: 5px; border-color: white; border-style: solid; }
-
-
-
 
   </style>
   <script type="text/javascript">
@@ -191,13 +205,15 @@
 
 <div class="container-fluid bg-1 text-center">
   <img src="headshot.jpg" class="img-circle border" alt="profile" style='margin:10px; margin-top:20px' border="5" width="300" height="300">
-    <h1 style='font-size: 65px'>Eliot Robson</h1>
-    <a href="https://twitter.com/eliotdexter"><i class="fab fa-twitter fa-3x" style='margin: 10px; color:white'></i></a>
-    <a href="https://www.instagram.com/eliotdexter/"><i class="fab fa-instagram fa-3x" style='margin: 10px; color:white'></i></a>
-    <a href="https://www.linkedin.com/in/eliot-robson/"><i class="fab fa-linkedin-in fa-3x" style='margin: 10px; color:white'></i></a>
-    <a href="https://www.github.com/eliotdexter/"><i class="fab fa-github fa-3x" style='margin: 10px; color:white'></i></a>
-    <a href="https://www.quora.com/profile/Eliot-Robson"><i class="fab fa-quora fa-3x" style='margin: 10px; color:white'></i></a>
-    <a href="https://stackexchange.com/users/3494323/eliotdexter"><i class="fab fa-stack-exchange fa-3x" style='margin: 10px; color:white'></i></a>
+    <h1 style='font-size: 65px'>Eliot W. Robson</h1>
+    <code>erobson2 [AT] illinois [DOT] edu</code>
+    <a href="https://twitter.com/eliotdexter"><i class="fab fa-twitter fa-3x"></i></a>
+    <a href="https://twitch.tv/eliotdexter"><i class="fab fa-twitch fa-3x"></i></a>
+    <a href="https://www.instagram.com/eliotdexter/"><i class="fab fa-instagram fa-3x"></i></a>
+    <a href="https://www.quora.com/profile/Eliot-Robson"><i class="fab fa-quora fa-3x"></i></a>
+    <a href="https://stackexchange.com/users/3494323/eliotdexter"><i class="fab fa-stack-exchange fa-3x"></i></a>
+    <a href="https://www.github.com/eliotdexter/"><i class="fab fa-github fa-3x"></i></a>
+    <a href="https://www.linkedin.com/in/eliot-robson/"><i class="fab fa-linkedin-in fa-3x"></i></a>
 </div>
 
 <nav id="navbar" class="navbar navbar-default" style="z-index: 100">
@@ -208,14 +224,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <button class="btn" onclick="changeAbout()">ABOUT</button>
+      <button class="btn" onclick="changeAbout()">about</button>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <button class="btn" onclick="changeResearch()">RESEARCH</button>
-        <button class="btn" onclick="changeTeaching()">TEACHING</button>
-        <button class="btn" onclick="changeCV()">CV</button>
-        <button class="btn" onclick="changeMisc()">MISC</button>
+        <button class="btn" onclick="changeResearch()">research</button>
+        <button class="btn" onclick="changeTeaching()">teaching</button>
+        <button class="btn" onclick="changeCV()">cv</button>
+        <button class="btn" onclick="changeMisc()">other</button>
       </ul>
     </div>
   </div>
@@ -351,6 +367,13 @@ function myFunction() {
   </p>
   <p style='font-size:20px'>
     I believe that doing good work requires proper tools. As a result, I'm way too into keyboards, mice, PC, headphones, and any other parts of my desk setup. Lately, I've been a big fan of Ducky keyboards and Razer mice.
+  </p>
+
+  <p style='font-size: 30px;font-family: aileron'>
+    <i>Streaming</i>
+  </p>
+  <p style='font-size:20px'>
+    I spend a lot of time doing math problems for practice. However, doing this alone can be isolating, and I don't think there are very many resources for understanding how difficult problems should be approached. As a result, I've started doing streams on Twitch (link above) of difficult problems in the hopes that it might be helpful to others (and to solicit help when I get stuck).
   </p>
 </div>
 </div>
