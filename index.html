@@ -144,7 +144,7 @@
         document.getElementById("research").style.display = "none";
         document.getElementById("teach").style.display = "none";
         document.getElementById("cv").style.display = "none";
-        document.getElementById("misc").style.display = "none";
+        document.getElementById("other").style.display = "none";
       }
     }
 
@@ -155,7 +155,7 @@
         document.getElementById("about").style.display = "none";
         document.getElementById("teach").style.display = "none";
         document.getElementById("cv").style.display = "none";
-        document.getElementById("misc").style.display = "none";
+        document.getElementById("other").style.display = "none";
 
       }
     }
@@ -167,7 +167,7 @@
         document.getElementById("about").style.display = "none";
         document.getElementById("research").style.display = "none";
         document.getElementById("cv").style.display = "none";
-        document.getElementById("misc").style.display = "none";
+        document.getElementById("other").style.display = "none";
 
       }
     }
@@ -179,13 +179,13 @@
         document.getElementById("about").style.display = "none";
         document.getElementById("research").style.display = "none";
         document.getElementById("teach").style.display = "none";
-        document.getElementById("misc").style.display = "none";
+        document.getElementById("other").style.display = "none";
 
       }
     }
 
-    function changeMisc() {
-      var x = document.getElementById("misc");
+    function changeOther() {
+      var x = document.getElementById("other");
       if (x.style.display === "none") {
         x.style.display = "block";
         document.getElementById("about").style.display = "none";
@@ -229,7 +229,7 @@
         <button class="btn" onclick="changeResearch()">research</button>
         <button class="btn" onclick="changeTeaching()">teaching</button>
         <button class="btn" onclick="changeCV()">cv</button>
-        <button class="btn" onclick="changeMisc()">other</button>
+        <button class="btn" onclick="changeOther()">other</button>
       </ul>
     </div>
   </div>
@@ -255,7 +255,6 @@
   <p style='font-size: 40px; margin-top: 10px'>
   Salve!
   </p>
-
   <p style='font-size: 25px'>
   I am currently a first year PhD student at the <a href="https://cs.illinois.edu/">University of Illinois at Urbana-Champaign</a>.
   </p>
@@ -268,7 +267,6 @@
   <p style='font-size: 25px'>
   Finally, I'd like to thank my colleague <a href="http://tanvibajpai.com/">Tanvi Bajpai</a> for the website template and letting me <strong>(allegedly)</strong> steal her aesthetic. You should check out her reseach!
   </p>
-
 </div>
 </div>
 
@@ -320,11 +318,8 @@
         * - semester spent as Head TA
       </p-->
     </p>
-
-
 </div>
 </div>
-
 
 <div id="cv" class="container" style="display:none">
 <div class="bg-2">
@@ -334,7 +329,7 @@
 </div>
 </div>
 
-<div id="misc" class="container" style="display:none">
+<div id="other" class="container" style="display:none">
 <div class="bg-2">
   <p style='font-size: 25px; margin-top: 10px'>
   This tab consists of other things about me.
