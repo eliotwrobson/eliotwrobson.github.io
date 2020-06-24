@@ -176,7 +176,6 @@
         x.style.display = "block";
         document.getElementById("research").style.display = "none";
         document.getElementById("teach").style.display = "none";
-        document.getElementById("cv").style.display = "none";
         document.getElementById("other").style.display = "none";
       }
     }
@@ -187,7 +186,6 @@
         x.style.display = "block";
         document.getElementById("about").style.display = "none";
         document.getElementById("teach").style.display = "none";
-        document.getElementById("cv").style.display = "none";
         document.getElementById("other").style.display = "none";
 
       }
@@ -199,19 +197,6 @@
         x.style.display = "block";
         document.getElementById("about").style.display = "none";
         document.getElementById("research").style.display = "none";
-        document.getElementById("cv").style.display = "none";
-        document.getElementById("other").style.display = "none";
-
-      }
-    }
-
-    function changeCV() {
-      var x = document.getElementById("cv");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-        document.getElementById("about").style.display = "none";
-        document.getElementById("research").style.display = "none";
-        document.getElementById("teach").style.display = "none";
         document.getElementById("other").style.display = "none";
 
       }
@@ -224,8 +209,6 @@
         document.getElementById("about").style.display = "none";
         document.getElementById("research").style.display = "none";
         document.getElementById("teach").style.display = "none";
-        document.getElementById("cv").style.display = "none";
-
       }
     }
 
@@ -261,7 +244,7 @@
       <ul class="nav navbar-nav navbar-right">
         <button class="btn" onclick="changeResearch()">research</button>
         <button class="btn" onclick="changeTeaching()">teaching</button>
-        <button class="btn" onclick="changeCV()">cv</button>
+        <button class="btn" onclick="window.open('/files/eliot_robson_cv.pdf', '_blank')">cv</button>
         <button class="btn" onclick="changeOther()">other</button>
       </ul>
     </div>
@@ -351,14 +334,6 @@
         * - semester spent as Head TA
       </p-->
     </p>
-</div>
-</div>
-
-<div id="cv" class="container" style="display:none">
-<div class="bg-2">
-  <p>
-  My <a href="/files/eliot_robson_cv.pdf">CV</a> (last update was idk).
-  </p>
 </div>
 </div>
 
