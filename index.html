@@ -179,9 +179,10 @@
       if (x.style.display === "none") {
         x.style.display = "block";
         document.getElementById("research").style.display = "none";
-        document.getElementById("teach").style.display = "none";
+        document.getElementById("teaching").style.display = "none";
         document.getElementById("other").style.display = "none";
       }
+      window.location.hash = "about";
     }
 
     function changeResearch() {
@@ -189,14 +190,15 @@
       if (x.style.display === "none") {
         x.style.display = "block";
         document.getElementById("about").style.display = "none";
-        document.getElementById("teach").style.display = "none";
+        document.getElementById("teaching").style.display = "none";
         document.getElementById("other").style.display = "none";
 
       }
+      window.location.hash = "research";
     }
 
     function changeTeaching() {
-      var x = document.getElementById("teach");
+      var x = document.getElementById("teaching");
       if (x.style.display === "none") {
         x.style.display = "block";
         document.getElementById("about").style.display = "none";
@@ -204,6 +206,7 @@
         document.getElementById("other").style.display = "none";
 
       }
+      window.location.hash = "teaching";
     }
 
     function changeOther() {
@@ -212,10 +215,28 @@
         x.style.display = "block";
         document.getElementById("about").style.display = "none";
         document.getElementById("research").style.display = "none";
-        document.getElementById("teach").style.display = "none";
+        document.getElementById("teaching").style.display = "none";
+      }
+      window.location.hash = "other";
+    }
+
+    function checkHash() {
+      if (location.hash === '#about') {
+          changeAbout();
+      }
+      else if (location.hash === '#research') {
+          changeResearch();
+      }
+      else if (location.hash === '#teaching') {
+          changeTeaching();
+      }
+      else if (location.hash === '#other') {
+          changeOther();
       }
     }
 
+    window.onload = checkHash;       // page load
+    //window.onhashchange = changeHash; // local click
 
   </script>
 </head>
@@ -286,7 +307,7 @@
     As an undergraduate, I worked with <a href="http://www.cs.cmu.edu/~gibbons/">Professor Phil Gibbons</a> on batch parallel algorithms for my senior thesis. I also worked with <a href="http://www.cs.cmu.edu/~rvinayak/">Professor Rashmi Vinayak</a> on improving ensemble algorithms with binary codes.
   </p>
   <p>
-    Finally, I'd like to thank my colleague <a href="http://tanvibajpai.com/">Tanvi Bajpai</a> for the website template. You should check out her reseach!
+    Finally, I'd like to thank my colleague <a href="http://tanvibajpai.com/">Tanvi Bajpai</a> for the website template. You should check out her research!
   </p>
 </div>
 </div>
@@ -295,7 +316,7 @@
 <div id="research" class="container" style="display:none">
 <div class="bg-2">
   <h3>
-    Interests
+    Research Interests
   </h3>
   <p>
     I am interested very broadly in combinatorics and theoretical computer science, and especially like results that shed light on the inner workings of an algorithm or combinatorial object. Lately, I've been thinking about (spectral) graph theory, randomized algorithms, geometric algorithms, and the interplay of these topics.
@@ -322,7 +343,7 @@
 </div>
 </div>
 
-<div id="teach" class="container" style="display:none">
+<div id="teaching" class="container" style="display:none">
 <div class="bg-2">
   <p>
     <strong>University of Illinois Urbana-Champaign</strong>
