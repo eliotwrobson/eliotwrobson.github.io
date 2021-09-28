@@ -10,6 +10,7 @@
   <link rel='shortcut icon' type='image/x-icon' href='favicon2.ico' />
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/7ed705c588.js" crossorigin="anonymous"></script>
@@ -181,49 +182,46 @@
   </style>
   <script type="text/javascript">
 
-    function changeAbout() {
-      var x = document.getElementById("about");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-        document.getElementById("research").style.display = "none";
-        document.getElementById("teaching").style.display = "none";
-        document.getElementById("other").style.display = "none";
+    function setDisplay(className, displayMode) {
+      var elements = document.getElementsByClassName(className);
+      for(var i = 0; i < elements.length; i++) {
+          elements[i].style.display = displayMode;
       }
+    }
+
+    function changeAbout() {
+      setDisplay("research",  "none");
+      setDisplay("teaching",  "none");
+      setDisplay("other"   ,  "none");
+      setDisplay("about"   ,  "block");
+
       window.location.hash = "about";
     }
 
     function changeResearch() {
-      var x = document.getElementById("research");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-        document.getElementById("about").style.display = "none";
-        document.getElementById("teaching").style.display = "none";
-        document.getElementById("other").style.display = "none";
+      setDisplay("about"   ,  "none");
+      setDisplay("teaching",  "none");
+      setDisplay("other"   ,  "none");
+      setDisplay("research",  "block");
 
-      }
       window.location.hash = "research";
     }
 
     function changeTeaching() {
-      var x = document.getElementById("teaching");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-        document.getElementById("about").style.display = "none";
-        document.getElementById("research").style.display = "none";
-        document.getElementById("other").style.display = "none";
+      setDisplay("about"   ,  "none");
+      setDisplay("research",  "none");
+      setDisplay("other"   ,  "none");
+      setDisplay("teaching",  "block");
 
-      }
       window.location.hash = "teaching";
     }
 
     function changeOther() {
-      var x = document.getElementById("other");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-        document.getElementById("about").style.display = "none";
-        document.getElementById("research").style.display = "none";
-        document.getElementById("teaching").style.display = "none";
-      }
+      setDisplay("about"   ,  "none");
+      setDisplay("research",  "none");
+      setDisplay("teaching",  "none");
+      setDisplay("other"   ,  "block");
+
       window.location.hash = "other";
     }
 
@@ -240,6 +238,8 @@
       else if (location.hash === '#other') {
           changeOther();
       }
+
+      $('html,body').scrollTop(0);
     }
 
     window.onload = checkHash;       // page load
@@ -253,15 +253,25 @@
   <!--img src="headshot.jpg" class="img-circle border" alt="profile" style='margin:10px; margin-top:20px' border="5" width="200" height="200"-->
     <h1>Eliot W. Robson</h1>
     <code>erobson2 [AT] illinois [DOT] edu</code>
-    <a href="https://twitter.com/eliotdexter"><i class="fab fa-twitter fa-3x"></i></a>
-    <a href="https://twitch.tv/eliotdexter"><i class="fab fa-twitch fa-3x"></i></a>
-    <a href="https://www.instagram.com/eliotdexter/"><i class="fab fa-instagram fa-3x"></i></a>
-    <a href="https://www.quora.com/profile/Eliot-Robson"><i class="fab fa-quora fa-3x"></i></a>
-    <a href="https://stackexchange.com/users/3494323/eliotdexter"><i class="fab fa-stack-exchange fa-3x"></i></a>
-    <a href="https://orcid.org/0000-0002-1476-6715"><i class="fab fa-orcid fa-3x"></i></a>
-    <a href="https://www.github.com/eliotwrobson/"><i class="fab fa-github fa-3x"></i></a>
-    <a href="https://www.linkedin.com/in/eliot-robson/"><i class="fab fa-linkedin-in fa-3x"></i></a>
-    <a href="https://medium.com/@eliotdexter"><i class="fab fa-medium-m fa-3x"></i></a>
+    <div class="about container">
+      <a href="https://twitter.com/eliotdexter"><i class="fab fa-twitter fa-3x"></i></a>
+      <a href="https://www.quora.com/profile/Eliot-Robson"><i class="fab fa-quora fa-3x"></i></a>
+      <a href="https://www.github.com/eliotwrobson/"><i class="fab fa-github fa-3x"></i></a>
+      <a href="https://www.linkedin.com/in/eliot-robson/"><i class="fab fa-linkedin-in fa-3x"></i></a>
+      <a href="https://medium.com/@eliotdexter"><i class="fab fa-medium-m fa-3x"></i></a>
+    </div>
+    <div class="research teaching container">
+      <a href="https://twitter.com/eliotdexter"><i class="fab fa-twitter fa-3x"></i></a>
+      <a href="https://stackexchange.com/users/3494323/eliotdexter"><i class="fab fa-stack-exchange fa-3x"></i></a>
+      <a href="https://orcid.org/0000-0002-1476-6715"><i class="fab fa-orcid fa-3x"></i></a>
+      <i class="ai ai-google-scholar ai-3x"></i>
+    </div>
+    <div class="other container">
+      <a href="https://twitter.com/eliotdexter"><i class="fab fa-twitter fa-3x"></i></a>
+      <a href="https://twitch.tv/eliotdexter"><i class="fab fa-twitch fa-3x"></i></a>
+      <a href="https://www.instagram.com/eliotdexter/"><i class="fab fa-instagram fa-3x"></i></a>
+    </div>
+
 </div>
 
 <nav id="navbar" class="navbar navbar-default">
@@ -300,7 +310,7 @@
   }
 </script-->
 
-<div id="about" class="container">
+<div class="about container">
 <div class="bg-2">
   <h2>
     Salve!
@@ -322,7 +332,7 @@
 </div>
 
 
-<div id="research" class="container" style="display:none">
+<div class="research container" style="display:none">
 <div class="bg-2">
   <h3>
     Research Interests
@@ -352,7 +362,7 @@
 </div>
 </div>
 
-<div id="teaching" class="container" style="display:none">
+<div class="teaching container" style="display:none">
 <div class="bg-2">
   <h3>
     Teaching
@@ -417,7 +427,7 @@
 </div>
 </div>
 
-<div id="other" class="container" style="display:none">
+<div class="other container" style="display:none">
 <div class="bg-2">
   <p>
     This tab consists of other things about me.
