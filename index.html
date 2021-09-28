@@ -181,6 +181,7 @@
 
   </style>
   <script type="text/javascript">
+    const classList = ['about', 'research', 'teaching', 'other'];
 
     function setDisplay(className, displayMode) {
       var elements = document.getElementsByClassName(className);
@@ -189,44 +190,33 @@
       }
     }
 
-    function changeAbout() {
-      setDisplay("research",  "none");
-      setDisplay("teaching",  "none");
-      setDisplay("other"   ,  "none");
-      setDisplay("about"   ,  "block");
+    function setDisplayClass(className, classList) {
+      for(var i = 0; i < classList.length; i++) {
+          setDisplay(classList[i], "none");
+      }
 
-      window.location.hash = "about";
+      setDisplay(className, "block");
+      window.location.hash = className;
+    }
+
+    function changeAbout() {
+      setDisplayClass('about', classList);
     }
 
     function changeResearch() {
-      setDisplay("about"   ,  "none");
-      setDisplay("teaching",  "none");
-      setDisplay("other"   ,  "none");
-      setDisplay("research",  "block");
-
-      window.location.hash = "research";
+      setDisplayClass('research', classList);
     }
 
     function changeTeaching() {
-      setDisplay("about"   ,  "none");
-      setDisplay("research",  "none");
-      setDisplay("other"   ,  "none");
-      setDisplay("teaching",  "block");
-
-      window.location.hash = "teaching";
+      setDisplayClass('teaching', classList);
     }
 
     function changeOther() {
-      setDisplay("about"   ,  "none");
-      setDisplay("research",  "none");
-      setDisplay("teaching",  "none");
-      setDisplay("other"   ,  "block");
-
-      window.location.hash = "other";
+      setDisplayClass('other', classList);
     }
 
     function checkHash() {
-      if (location.hash === '#about') {
+      if (location.hash === '#about' || location.hash === '') {
           changeAbout();
       }
       else if (location.hash === '#research') {
@@ -242,9 +232,9 @@
       $('html,body').scrollTop(0);
     }
 
+
     window.onload = checkHash;       // page load
     //window.onhashchange = changeHash; // local click
-
   </script>
 </head>
 <body class="bg-3">
@@ -261,10 +251,11 @@
       <a href="https://medium.com/@eliotdexter"><i class="fab fa-medium-m fa-3x"></i></a>
     </div>
     <div class="research teaching container">
-      <a href="https://twitter.com/eliotdexter"><i class="fab fa-twitter fa-3x"></i></a>
       <a href="https://stackexchange.com/users/3494323/eliotdexter"><i class="fab fa-stack-exchange fa-3x"></i></a>
       <a href="https://orcid.org/0000-0002-1476-6715"><i class="fab fa-orcid fa-3x"></i></a>
-      <i class="ai ai-google-scholar ai-3x"></i>
+      <a href="https://arxiv.org/a/0000-0002-1476-6715.html"><i class="ai ai-arxiv ai-3x"></i></a>
+      <!--i class="ai ai-google-scholar ai-3x"></i>
+      <i class="ai ai-dblp ai-3x"></i-->
     </div>
     <div class="other container">
       <a href="https://twitter.com/eliotdexter"><i class="fab fa-twitter fa-3x"></i></a>
