@@ -1,4 +1,3 @@
-<title>Eliot Robson's Webpage</title>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +8,16 @@
   <meta name="keywords" content="Eliot Robson, research, math, theoretical computer science">
   <meta name="author" content="Eliot Robson">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Eliot Robson's Webpage">
+  <meta property="og:description" content="Eliot Robson's personal website.">
+  <meta property="og:url" content="https://eliotwrobson.github.io/">
+  <meta property="og:image" content="https://eliotwrobson.github.io/headshot.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Eliot Robson's Webpage">
+  <meta name="twitter:description" content="Eliot Robson's personal website.">
+  <meta name="twitter:image" content="https://eliotwrobson.github.io/headshot.jpg">
+  <link rel="canonical" href="https://eliotwrobson.github.io/">
   <link rel='shortcut icon' type='image/x-icon' href='favicon2.ico' />
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -119,7 +128,8 @@
       font-family: roboto;
       margin-left: 10px;
       margin-right: 10px;
-      margin-top: 10px margin-bottom:500px;
+      margin-top: 10px;
+      margin-bottom: 500px;
       padding-bottom: 100px;
     }
 
@@ -195,9 +205,15 @@
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+      list-style: none;
+      padding-left: 0;
     }
 
-    #myNavbar .navbar-nav>button {
+    #myNavbar .navbar-nav>li {
+      float: none;
+    }
+
+    #myNavbar .navbar-nav>li>.btn {
       float: none;
     }
 
@@ -206,7 +222,7 @@
         display: block;
       }
 
-      #myNavbar .navbar-nav>button {
+      #myNavbar .navbar-nav>li>.btn {
         display: block;
         width: 100%;
         text-align: left;
@@ -283,11 +299,14 @@
     <h1>Eliot W. Robson</h1>
     <code>eliot.robson24 [AT] gmail [DOT] com</code>
     <div class="icon-row">
-      <a href="https://www.github.com/eliotwrobson/"><i class="fab fa-github fa-3x"></i></a>
-      <a href="https://www.instagram.com/eliotdexter/"><i class="fab fa-instagram fa-3x"></i></a>
-      <a href="https://www.linkedin.com/in/eliot-robson/"><i class="fab fa-linkedin-in fa-3x"></i></a>
-      <a href="https://orcid.org/0000-0002-1476-6715"><i class="fab fa-orcid fa-3x"></i></a>
-      <a href="https://arxiv.org/a/0000-0002-1476-6715.html"><i class="ai ai-arxiv ai-3x"></i></a>
+      <a href="https://www.github.com/eliotwrobson/" aria-label="GitHub profile"><i class="fab fa-github fa-3x"></i></a>
+      <a href="https://www.instagram.com/eliotdexter/" aria-label="Instagram profile"><i
+          class="fab fa-instagram fa-3x"></i></a>
+      <a href="https://www.linkedin.com/in/eliot-robson/" aria-label="LinkedIn profile"><i
+          class="fab fa-linkedin-in fa-3x"></i></a>
+      <a href="https://orcid.org/0000-0002-1476-6715" aria-label="ORCID profile"><i class="fab fa-orcid fa-3x"></i></a>
+      <a href="https://arxiv.org/a/0000-0002-1476-6715.html" aria-label="arXiv author page"><i
+          class="ai ai-arxiv ai-3x"></i></a>
     </div>
 
   </div>
@@ -303,10 +322,11 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <button class="btn" onclick="changeAbout()">about</button>
-          <button class="btn" onclick="changeResearch()">research</button>
-          <button class="btn" onclick="changeArtwork()">artwork</button>
-          <button class="btn" onclick="window.open('https://www.overleaf.com/read/csddkkymmzcs', '_blank')">cv</button>
+          <li><button class="btn" onclick="changeAbout()">about</button></li>
+          <li><button class="btn" onclick="changeResearch()">research</button></li>
+          <li><button class="btn" onclick="changeArtwork()">artwork</button></li>
+          <li><button class="btn"
+              onclick="window.open('https://www.overleaf.com/read/csddkkymmzcs', '_blank')">cv</button></li>
         </ul>
       </div>
     </div>
@@ -368,7 +388,7 @@
       <h2>Research Interests</h2>
       <p>My research interests are very broad, and I am generally excited by work in most topics. Given this, my
         philosophy is to focus my energy on work that has a broad impact and is consumable by society, as
-        this is ultimately the primary consumer of any work I do.
+        this is ultimately the primary consumer of any work I do. A list of publications can be found on my CV.
       </p>
       <h3>
         Design & Impact of AI Tools
